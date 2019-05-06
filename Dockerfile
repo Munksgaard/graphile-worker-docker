@@ -4,4 +4,6 @@ LABEL description="High performance Node.js/PostgreSQL job queue (also suitable 
 RUN yarn add graphile-worker@0.1.0-alpha.0
 RUN yarn add faktory-worker@3.0.2
 
+COPY faktory-export.js ./tasks/faktory-export.js
+
 ENTRYPOINT ["yarn", "run", "graphile-worker"]
